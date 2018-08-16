@@ -3,24 +3,29 @@
 	<head>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
 	</head>
 	</body>
-		<h1> Saisissez votre question </h1>
+		<h1 align="center"> Your question: </h1>
 
-		<form method="POST" action="/send">
+		<form method="POST" action="/">
 
 			<!-- Title -->
-			Titre:
+			<div class="h1" align="center">Title: </div>
+
 			<div class="form-group">
-				<input type="text" name="title">
-			</div>
-			Texte:
-			<div class="form-group">
-				<input type="text" name="text">
+				<input type="text" name="title" size="150" style="font-size:12pt;display:block; margin:auto;">
 			</div>
 
+		    <div class="h1" align="center"> Text: </div>
 
-			<input class="btn btn-primary" type="submit">
+			<div class="form-group">
+				<input type="text" name="text" size="150" style="font-size:12pt;height:600px; display:block; margin:auto;">
+			</div>
+
+			<input class="btn btn-primary" type="submit" style="display:block; margin:auto;" >
 		</form>
 	<body>
 </html>

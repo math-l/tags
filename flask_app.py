@@ -85,17 +85,16 @@ contraction_clean = {
     "wasn't":"was not"}
 
 
-@app.route('/send', methods=['GET','POST'])
+#@app.route('/send', methods=['GET','POST'])
+
+@app.route('/', methods=['GET','POST'])
 def send():
     if request.method == 'POST':
-        title = 'Should a function have only one return statement?'
-        #title = request.form['title']
-        #text = request.form['text']
-        text = "<p>Are there good reasons why it's a better practice to have only one return statement in a function? </p>\n\n<p>Or is it okay to return from a function as soon as it is logically correct to do so, meaning there may be many return statements in the function?</p>\n"
+        #title = 'Should a function have only one return statement?'
+        #text = "<p>Are there good reasons why it's a better practice to have only one return statement in a function? </p>\n\n<p>Or is it okay to return from a function as soon as it is logically correct to do so, meaning there may be many return statements in the function?</p>\n"
 
-
-
-
+        title = request.form['title']
+        text = request.form['text']
 
         d = {'Title': [title], 'Body': [text]}
         df_test = pd.DataFrame(data=d)
